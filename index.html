@@ -5,7 +5,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Bankapplicatie</title>
   <link rel="stylesheet" href="style.css">
-  <script src="java.js" defer></script>
+  <script src="script.js" defer></script>
 </head>
 <body>
  
@@ -22,16 +22,18 @@
       </ul>
     </nav>
   </header>
-  <input type="text" id="username" placeholder="Gebruikersnaam">
-    <br><br>
-
-    <input type="password" id="password" placeholder="Wachtwoord">
-    <br><br>
-
-    <button onclick="login()">Inloggen</button>
-
-    <p id="errorMessage"></p>
-
+ <div class="login-container">
+        <form id="login-form">
+            <label for="username">Gebruikersnaam:</label>
+            <input type="text" id="username" required>
+            
+            <label for="password">Wachtwoord:</label>
+            <input type="password" id="password" required>
+            
+            <button type="button" onclick="login()">Inloggen</button>
+        </form>
+        <div id="notification"></div>
+    </div>
     <script src="script.js"></script>
   <br><br><br><br><br><br>
  
